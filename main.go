@@ -6,7 +6,6 @@ import (
 	"fmt"
 	"io"
 	"log"
-	"os"
 )
 
 var rootServer = flag.String("server", "uwot.cynthia.re:43443", "uwot server")
@@ -24,7 +23,7 @@ func main() {
 
 	defer conn.Close()
 
-	n, err := conn.Write([]byte(os.Args[1] + "\r\n"))
+	n, err := conn.Write([]byte(flag.Arg(0) + "\r\n"))
 	if err != nil {
 		log.Fatal(n, err)
 		return
