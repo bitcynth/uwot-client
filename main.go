@@ -82,6 +82,6 @@ func main() {
 	fmt.Println(resp)
 
 	if isEV && len(cert.Subject.Organization) > 0 && len(cert.Subject.Country) > 0 {
-		fmt.Printf("\033[32m\033[5mVerified by: %s (%s)\033[0m\n", cert.Subject.Organization[0], cert.Subject.Country[0])
+		fmt.Printf("\033[32mVerified by: %s (%s)\033[0m\n", cert.Subject.Organization[0], cert.Subject.Country[0])
 	}
 }
