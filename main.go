@@ -14,9 +14,10 @@ import (
 
 // Trusted EV OIDs, to request an OID to be added, contact: me@cynthia.re
 var evOids = []asn1.ObjectIdentifier{
-	getOid("2.16.840.1.114412.2.1"),
-	getOid("1.3.6.1.4.1.6334.1.100.1"),
-	getOid("2.16.840.1.113733.1.7.23.6"),
+	getOid("1.3.6.1.4.1.55594.1.1.1"),    // Cynthia.re EV OID
+	getOid("2.16.840.1.114412.2.1"),      // DigiCert EV OID
+	getOid("1.3.6.1.4.1.6334.1.100.1"),   // Baltimore (DigiCert) EV OID
+	getOid("2.16.840.1.113733.1.7.23.6"), // VeriSign (DigiCert) EV OID
 }
 
 var rootServer = flag.String("server", "uwot.cynthia.re:43443", "uwot server")
